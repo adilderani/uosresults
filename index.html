@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>uosresults - MA Part I</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>MA Part I Result</h2>
+    <input type="text" id="rollInput" placeholder="Enter Roll Number">
+    <button onclick="checkResult()">Submit</button>
+    <div class="result" id="resultBox"></div>
+  </div>
+
+  <script>
+    function checkResult() {
+      const roll = document.getElementById("rollInput").value.trim();
+      const resultBox = document.getElementById("resultBox");
+
+      if (roll === "8045063") {
+        resultBox.innerHTML = "<strong>Status:</strong> Passed<br><strong>Percentage:</strong> 67.5%";
+      } else {
+        resultBox.innerHTML = "<span style='color: red;'>Result not found.</span>";
+      }
+    }
+  </script>
+
+</body>
+</html>
